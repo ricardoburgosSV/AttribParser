@@ -24,6 +24,7 @@
 
 using namespace std;
 
+
 // Prints a vector for debugging purposes
 void printVector(vector<string> v) {
     cout << "*** vector ==> [";
@@ -40,15 +41,6 @@ void printVector(vector<string> v) {
     cout << endl;
 }
 
-// determines if the vector v contains the string q
-bool vectorContains(vector<string> v, string q) {
-    for (int i = 0; i < v.size(); i++) {
-        if (v[i] == q) {
-            return true;
-        }
-    }
-    return false;
-}
 
 // split a string q by the given character c
 // returns a vector with substrings
@@ -66,6 +58,7 @@ vector<string> split(string q, char c) {
         
 }
 
+
 // Remove angular brackets
 string removeAngularBrackets(string q) {
     if (q.at(0) == '<') q.erase(0, 1);
@@ -74,6 +67,7 @@ string removeAngularBrackets(string q) {
     return q;
 }
 
+
 // Strip a string from quotation marks ("")
 string removeQuotes(string q) {
     if (q.at(0) == '"') q.erase(0, 1);
@@ -81,6 +75,7 @@ string removeQuotes(string q) {
     if (q.at(s-1) == '"') q.erase(s-1, 1);
     return q;
 }
+
 
 // Removes spaces before and after equal sign (=)
 string fixEquals(string q) {
@@ -93,6 +88,7 @@ string fixEquals(string q) {
     return q;
 }
 
+
 // Extracts the tag name from a line
 string extractTag(string q) {
     q = removeAngularBrackets(q);
@@ -100,6 +96,7 @@ string extractTag(string q) {
     return q.substr(0, pos);
 
 }
+
 
 // Process a single query
 string parseQuery(vector<string> src, string q) {
@@ -172,6 +169,7 @@ string parseQuery(vector<string> src, string q) {
     return result;
     
 }
+
 
 int main(int argc, char *argv[]) {
 

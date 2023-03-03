@@ -8,5 +8,5 @@ if [ -f $TGT ]; then
 fi
 
 # Using Intel C++ compiler
-# icpx -Wall -std=c++17 -fsycl main.cpp -o main
-icpc -Wall -std=c++17 -diag-disable=10441 $SRC -o $TGT
+icpx -Wall -std=c++17 -fsycl $SRC -o $TGT
+# icpc -Wall -std=c++17 -diag-disable=10441 $SRC -o $TGT

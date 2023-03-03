@@ -1,0 +1,12 @@
+#!/bin/bash
+
+SRC=attribute_parser.cpp
+TGT=ap
+
+if [ -f $TGT ]; then
+	rm -f $TGT
+fi
+
+# Using Intel C++ compiler
+# icpx -Wall -std=c++17 -fsycl main.cpp -o main
+icpc -Wall -std=c++17 -diag-disable=10441 $SRC -o $TGT

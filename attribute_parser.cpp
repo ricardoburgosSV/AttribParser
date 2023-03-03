@@ -125,7 +125,7 @@ string parseQuery(vector<string> src, string q) {
 
     string tag  = sq2[0];
     string attr = sq2[1];
-    string currentTag {}; // Current tag
+    string currentTag {};
 
     // Iterate on the input source code line by line
     for (unsigned int i = 0; i < src.size(); i++) {
